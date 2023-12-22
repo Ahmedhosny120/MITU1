@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MITU</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styla.css"
+   
+</head>
+<body>
+   
+ 
+    <header>
+       <a href="#" class="logo">mitu</a>
+       <nav class="navigation">
+         <a href="#HOME">HOME</a>
+         <a href="#encrypting">Encrypting</a>
+         <a href="#programmers">programmers</a>
+         
+       </nav>
+    </header>
+
+    <section class="main" id="HOME">
+        <div>
+            <h2>Hello, I'm MITU<br><span>Cyber security</span></h2>
+            <h3>Encrypting and decrypting is my jop</h3>
+            <a href="#encrypting" class="main-btn">ENCRYPTING AND DECRYPTING</a>
+            
+
+
+        </div>
+
+    </section>
+    <section class="main1" id="encrypting">
+        <h2 class="title">ENCRYPTING AND DECRYPTING</h2>
+        <div>
+            <textarea id="plaintext" rows="4" cols="50"></textarea><br>
+            <button onclick="encrypt()" class="main-btn">Encrypt</button><br>
+            <textarea id="ciphertext" rows="4" cols="50" ></textarea><br>
+            <button onclick="decrypt()" class="main-btn1">Decrypt</button><br>
+            <textarea id="decryptedtext" rows="4" cols="50" readonly></textarea>
+        
+            <script>
+                function encrypt() {
+                    var plaintext = document.getElementById("plaintext").value;
+                    var key = "secret-key"; // Replace with your seENCRYPTING AND DECRYPTINGcret key
+                    var ciphertext = CryptoJS.AES.encrypt(plaintext, key).toString();
+                    document.getElementById("ciphertext").value = ciphertext;
+                }
+        
+                function decrypt() {
+                    var ciphertext = document.getElementById("ciphertext").value;
+                    var key = "secret-key"; // Replace with your secret key
+                    var bytes = CryptoJS.AES.decrypt(ciphertext, key);
+                    var decryptedText = bytes.toString(CryptoJS.enc.Utf8);
+                    document.getElementById("decryptedtext").value = decryptedText;
+                }
+            </script>
+        </div>
+    </section>
+    <section class="programmers" id="programmers">
+        <h2 class="title">programmers</h2>
+        <div class="content">
+            <div class="programmers-card">
+                <div class="programmers-image">
+                    <img src="images/1 img.jpg">
+                </div>
+                <div class="programmers-info">
+                    <strong class="programmers-title">AHMED HOSNY</strong>
+
+                </div>
+            </div>
+            <div class="programmers-card">
+                <div class="programmers-image">
+                    <img src="images/2 img (2).jpg">
+                </div>
+                <div class="programmers-info">
+                    <strong class="programmers-title">AHMED SHABAN</strong>
+
+                </div>
+            </div>
+            <div class="programmers-card">
+                <div class="programmers-image">
+                    <img src="images/3 img (2).jpg">
+                </div>
+                <div class="programmers-info">
+                    <strong class="programmers-title">AMR GAMAL</strong>
+
+                </div>
+            </div>
+            <div class="programmers-card">
+                <div class="programmers-image">
+                    <img src="images/4img.jpg">
+                </div>
+                <div class="programmers-info">
+                    <strong class="programmers-title">MOHAMAD HISHAM</strong>
+
+                </div>
+            </div>
+            <div class="programmers-card">
+                <div class="programmers-image">
+                    <img src="images/5 img (2).jpg">
+                </div>
+                <div class="programmers-info">
+                    <strong class="programmers-title">ANAS MOHAMAD</strong>
+
+                </div>
+            </div>
+            <div class="programmers-card">
+                <div class="programmers-image">
+                    <img src="images/1 img.jpg">
+                </div>
+                <div class="programmers-info">
+                    <strong class="programmers-title">AHMED HOSNY</strong>
+
+                </div>
+            </div>
+
+            
+        </div>
+
+
+    <footer class="footer">
+        <p>by Dr. Hassan Ibrahim                       Thanks</p>
+
+    </footer>
+
+
+
+
+</body>
+</html>
